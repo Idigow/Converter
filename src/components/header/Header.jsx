@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom'
 function Header (props) {
   return (
     <div className={style.header}>
-      <Link to={'/main/'}>Главная</Link>
-      <Link to={'/converter'}> Конвертер</Link>
+      <Link to={'/'}>Главная</Link>
+      <Link to={'/main/converter'}> Конвертер</Link>
     </div>
   )
 }

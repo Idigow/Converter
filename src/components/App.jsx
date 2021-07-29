@@ -16,17 +16,13 @@ function App (props) {
 
   return (
     <div className={style.body}>
+      <Header/>
       <Switch>
-        <Route exact path={'/'}>
-          <Header/>
-        </Route>
-        <Route exact path='/main/:charCode?'>
-          <Header/>
+
+        <Route exact path='/:charCode?'>
           <ValuteCard/>
         </Route>
-
-        <Route path='/converter'>
-          <Header/>
+        <Route exact path='/main/converter'>
           <Converter/>
         </Route>
       </Switch>

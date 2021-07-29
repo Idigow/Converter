@@ -5,10 +5,10 @@ import { Link, useParams } from 'react-router-dom'
 import { selectValute } from '../../redux/actions'
 
 function ValuteCard (props) {
-  const allValutes = useSelector(state => state.valute.valute)
-  const valutes = Object.entries(allValutes)
+  const allValutes = Object.entries(useSelector(state => state.valute.valute))
   const dispatch = useDispatch()
   const charCode = useParams().charCode
+  console.log(allValutes)
 
   useEffect(() => {
     if (charCode) {
@@ -18,9 +18,9 @@ function ValuteCard (props) {
 
   return (
     <div className={style.valuteFlex}>
-      {valutes.map(([key, value], index)=>{
+      {allValutes.map(([key, value], index)=>{
         return (
-          <Link to={`/main/${key}`} key={index}>
+          <Link to={`/${key}`} key={index}>
             <div key={index} className={style.valuteCard}>
               <div>{key}</div>
               <div>{value}</div>
