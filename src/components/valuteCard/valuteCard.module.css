@@ -1,0 +1,17 @@
+.valuteCard{
+    padding: 10px;
+    text-align: center;
+    width: 250px;
+    border: solid 1px lightslategray;
+    margin: 3px;
+    color: #f5f6f8;
+    background-color: #1b4655;
+    border-radius: 10px;
+}
+.valuteFlex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1140px;
+    margin: auto;
+}
